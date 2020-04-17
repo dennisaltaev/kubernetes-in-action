@@ -12,9 +12,9 @@ spec:
       labels:
         app: kubia
     spec:
-    containers:
-      - image: luksa/kubia:v1
-        name: nodejs
+      containers:
+        - image: luksa/kubia:v1
+          name: nodejs
 ---
 apiVersion: v1
 kind: Service
