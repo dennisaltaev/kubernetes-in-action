@@ -3,9 +3,10 @@ kind: Deployment
 metadata:
   name: kubia
 spec:
-  selector:
-    app: kubia
   replicas: 3
+  selector:
+    matchLabels:
+      app: kubia
   template:
     metadata:
       name: kubia
