@@ -17,5 +17,4 @@ spec:
       - image: localhost:5000/nginx-angular:1.0.0
         name: nginx-angular
         ports:
-        - port: 80
-          containerPort: 80
+        - containerPort: 80
