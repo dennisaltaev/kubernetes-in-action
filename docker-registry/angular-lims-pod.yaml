@@ -13,10 +13,10 @@ spec:
       labels:
         app: lims-frontend
     spec:
-      tolerations:
-        - key: "node-role.kubernetes.io/master"
-          effect: "NoSchedule"
-          operator: "Exists"
       containers:
-        - image: localhost:5000/lims-frontend:2.0.0
+        - image: localhost:5000/lims-frontend:3.0.0
           name: lims-frontend
+      # tolerations:
+      #   - key: "node-role.kubernetes.io/master"
+      #     effect: "NoSchedule"
+      #     operator: "Exists"
