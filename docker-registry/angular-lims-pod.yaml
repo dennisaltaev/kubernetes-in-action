@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lims-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lims-frontend
+  template:
+    metadata:
+      name: lims-frontend
+      labels:
+        app: lims-frontend
+    spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/master"
+          effect: "NoSchedule"
+          operator: "Exists"
+      containers:
+        - image: localhost:5000/lims-frontend:1
+          name: lims-frontend
