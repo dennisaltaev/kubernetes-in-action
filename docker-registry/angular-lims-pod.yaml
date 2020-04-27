@@ -16,6 +16,8 @@ spec:
       containers:
         - image: localhost:5000/lims-frontend:3.0.0
           name: lims-frontend
+          ports:
+            - port: 8080
       # tolerations:
       #   - key: "node-role.kubernetes.io/master"
       #     effect: "NoSchedule"

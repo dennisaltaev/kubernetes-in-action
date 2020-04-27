@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-angular
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-angular
+  template:
+    metadata:
+      name: nginx-angular
+      labels:
+        app: nginx-angular
+    spec:
+      containers:
+      - image: localhost:5000/nginx-angular:1.0.0
+        name: nginx-angular
+        ports:
+        - port: 80
