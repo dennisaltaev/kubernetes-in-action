@@ -18,5 +18,5 @@ spec:
           effect: "NoSchedule"
           operator: "Exists"
       containers:
-        - image: localhost:5000/lims-frontend:1
+        - image: localhost:5000/lims-frontend:2.0.0
           name: lims-frontend
